@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa interactivo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+        #map { height: 600px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([23.6260, -102.5375], 5);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Agregar un marcador para Querétaro
+           var queretaroMarker = L.marker([20.5881, -100.3881]).addTo(map);
+           queretaroMarker.bindPopup("<b>Querétaro</b><br><a href='https://tecmx.sharepoint.com/sites/ProcesosGobiernoTEC/Documentos%20compartidos/Forms/AllItems.aspx?e=5%3A99b1de2eb2484b16b2559c8db7da537a&sharingv2=true&fromShare=true&at=9&CT=1713388358725&OR=OWA%2DNT%2DMail&CID=249aeb5d%2Df4fc%2D70be%2D1f53%2D3df1c34db709&WSL=1&sw=auth&FolderCTID=0x01200097B3AB6EF8C5124EA4D2F1FACA63759A&id=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FQUER%C3%89TARO%2FRefrendo%202024%2FREFRENDO%202024%5Fvence%2031%20diciembre%2024%2Epdf&viewid=8e07baff%2D5624%2D4672%2D99a9%2Dcc5424c23fda&parent=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FQUER%C3%89TARO%2FRefrendo%202024'>Abrir PDF</a>").openPopup();
+           var guanajuatoMarker = L.marker([20.8796, -101.3419]).addTo(map);
+           guanajuatoMarker.bindPopup("<b>Guanajuato</b><br><a href='https://tecmx.sharepoint.com/sites/ProcesosGobiernoTEC/Documentos%20compartidos/Forms/AllItems.aspx?e=5%3A99b1de2eb2484b16b2559c8db7da537a&sharingv2=true&fromShare=true&at=9&CT=1714432217107&OR=OWA%2DNT%2DMail&CID=4912fb45%2D2e97%2Da3dc%2Da605%2D52373f9642a1&WSL=1&FolderCTID=0x01200097B3AB6EF8C5124EA4D2F1FACA63759A&id=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FGUANAJUATO%2FRefrendo2023%5Fvence%2030%20abril%2024%2Epdf&viewid=8e07baff%2D5624%2D4672%2D99a9%2Dcc5424c23fda&parent=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FGUANAJUATO'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Aguascalientes
+           var aguascalientesMarker = L.marker([21.8818, -102.291]).addTo(map);
+           aguascalientesMarker.bindPopup("<b>Aguascalientes</b><br><a href='https://tecmx.sharepoint.com/sites/ProcesosGobiernoTEC/Documentos%20compartidos/Forms/AllItems.aspx?e=5%3A99b1de2eb2484b16b2559c8db7da537a&sharingv2=true&fromShare=true&at=9&CT=1714432080922&OR=OWA%2DNT%2DMail&CID=4d85a902%2D086f%2Ddd10%2D50a1%2Db72b5951ccae&WSL=1&FolderCTID=0x01200097B3AB6EF8C5124EA4D2F1FACA63759A&id=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FAGUASCALIENTES%2FREFRENDO%202024%2FRefrendo2024%5Fvence%20dic%202024%2Ejpg&viewid=8e07baff%2D5624%2D4672%2D99a9%2Dcc5424c23fda&parent=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FAGUASCALIENTES%2FREFRENDO%202024'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Chihuahua
+           var chihuahuaMarker = L.marker([28.6353, -106.0887]).addTo(map);
+           chihuahuaMarker.bindPopup("<b>Chihuahua</b><br><a href='ruta_al_pdf_de_chihuahua.pdf'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Jalisco
+           var jaliscoMarker = L.marker([20.6595, -103.3494]).addTo(map);
+           jaliscoMarker.bindPopup("<b>Jalisco</b><br><a href='ruta_al_pdf_de_jalisco.pdf'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Nayarit
+           var nayaritMarker = L.marker([21.7514, -104.8455]).addTo(map);
+           nayaritMarker.bindPopup("<b>Nayarit</b><br><a href='ruta_al_pdf_de_nayarit.pdf'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Puebla
+           var pueblaMarker = L.marker([19.0414, -98.2063]).addTo(map);
+           pueblaMarker.bindPopup("<b>Puebla</b><br><a href='ruta_al_pdf_de_puebla.pdf'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Quintana Roo
+           var quintanaRooMarker = L.marker([19.1817, -88.4791]).addTo(map);
+           quintanaRooMarker.bindPopup("<b>Quintana Roo</b><br><a href='ruta_al_pdf_de_quintana_roo.pdf'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Sonora
+           var sonoraMarker = L.marker([29.0892, -110.9611]).addTo(map);
+           sonoraMarker.bindPopup("<b>Sonora</b><br><a href='https://tecmx.sharepoint.com/sites/ProcesosGobiernoTEC/Documentos%20compartidos/Forms/AllItems.aspx?e=5%3A99b1de2eb2484b16b2559c8db7da537a&sharingv2=true&fromShare=true&at=9&CT=1714432217107&OR=OWA%2DNT%2DMail&CID=4912fb45%2D2e97%2Da3dc%2Da605%2D52373f9642a1&WSL=1&FolderCTID=0x01200097B3AB6EF8C5124EA4D2F1FACA63759A&id=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FSONORA%2FSonora%5Frefrendo2024%5Fvencemayo07%5F25%2Epdf&viewid=8e07baff%2D5624%2D4672%2D99a9%2Dcc5424c23fda&parent=%2Fsites%2FProcesosGobiernoTEC%2FDocumentos%20compartidos%2FPOR%20ESTADOS%2FSONORA'>Abrir PDF</a>").openPopup();
+           // Agregar un marcador para Tlaxcala
+           var tlaxcalaMarker = L.marker([19.4167, -98.1667]).addTo(map);
+           tlaxcalaMarker.bindPopup("<b>Tlaxcala</b><br><a href='ruta_al_pdf_de_tlaxcala.pdf'>Abrir PDF</a>").openPopup();
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
